@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
@@ -35,11 +36,9 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try {
-            setContentView(R.layout.activity_home);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        setContentView(R.layout.activity_home);
+
+
         /**
          * 版本初始化判断
          */
@@ -77,7 +76,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
 
 
         //初始化主页面抽屉布局
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_home_drawer);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_home);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         if (drawer != null){
             drawer.setDrawerListener(toggle);
@@ -89,8 +88,9 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         if (navigationView != null){
             navigationView.setNavigationItemSelectedListener(this);
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, NewsFragment.newInstance()).commitAllowingStateLoss();
         }
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, NewsFragment.newInstance()).commitAllowingStateLoss();
+
 
         /**
          * 根据按键切换fragment
@@ -110,13 +110,15 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
     public void setUpBottomNavigationBar(){
         bottomlayout = (BottomNavigationBar) findViewById(R.id.bottomLayout);
         if (bottomlayout != null){
+            bottomlayout.setTabWidthSelectedScale(1.5f);
+            bottomlayout.setTextDefaultVisible(false);
             bottomlayout.addTab(R.drawable.tab_news_selector,"资讯",0xff4a5965);
             bottomlayout.addTab(R.drawable.tab_chat_selector,"会话",0xff096c54);
             bottomlayout.addTab(R.drawable.tab_contact_selector,"通讯录",0xff8a6a64);
             bottomlayout.addTab(R.drawable.tab_me_selector,"我",0xff553b36);
             bottomlayout.setOnTabListener(new BottomNavigationBar.TabListener() {
                 @Override
-                public void onSelected(BottomBarTab bottomBarTab,int position) {
+                public void onSelected(BottomBarTab tab,int position) {
                     Fragment fragment = null;
                     switch (position){
                         case 0:
@@ -128,8 +130,11 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
                         case 2:
                             fragment = ContactFragment.newInstance();
                             break;
-                        default:
+                        case 3:
                             fragment = MeFragment.newInstance();
+                            break;
+                        default:
+                            fragment = NewsFragment.newInstance();
                             break;
                     }
                     getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commitAllowingStateLoss();
@@ -181,6 +186,25 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        return false;
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_camera) {
+            // Handle the camera action
+        } else if (id == R.id.nav_gallery) {
+
+        } else if (id == R.id.nav_slideshow) {
+
+        } else if (id == R.id.nav_manage) {
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_home);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

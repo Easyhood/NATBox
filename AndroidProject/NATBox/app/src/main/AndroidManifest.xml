@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.rgk.qiguan.natbox.ui.activity.HomeActivity"
+        <activity android:name=".ui.activity.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 

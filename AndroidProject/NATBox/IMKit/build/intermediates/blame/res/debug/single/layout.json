@@ -36,12 +36,12 @@
         "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\layout\\rc_fr_messagelist.xml"
     },
     {
-        "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_public_service_inf.xml",
-        "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\layout\\rc_fr_public_service_inf.xml"
-    },
-    {
         "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_group_conversation.xml",
         "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\layout\\rc_item_group_conversation.xml"
+    },
+    {
+        "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_public_service_inf.xml",
+        "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\layout\\rc_fr_public_service_inf.xml"
     },
     {
         "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_file_list.xml",
@@ -132,12 +132,12 @@
         "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\layout\\rc_ac_file_manager.xml"
     },
     {
-        "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_base_conversation.xml",
-        "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\layout\\rc_item_base_conversation.xml"
-    },
-    {
         "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_camera.xml",
         "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\layout\\rc_ac_camera.xml"
+    },
+    {
+        "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_base_conversation.xml",
+        "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\layout\\rc_item_base_conversation.xml"
     },
     {
         "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_input_menu.xml",

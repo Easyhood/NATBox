@@ -2,7 +2,6 @@ package com.rgk.qiguan.natbox.ui.fragment;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,7 @@ import com.rgk.qiguan.natbox.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ContactFragment extends BaseFragment {
+public class ContactFragment extends Fragment {
 
 
     public ContactFragment() {
@@ -27,7 +26,7 @@ public class ContactFragment extends BaseFragment {
 
 
     @Override
-    public View initView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_contact,container,false);
     }
 }
