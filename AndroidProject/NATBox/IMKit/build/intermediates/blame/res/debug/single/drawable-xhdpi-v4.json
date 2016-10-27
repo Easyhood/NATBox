@@ -312,12 +312,12 @@
         "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\drawable-xhdpi\\u1f633.png"
     },
     {
-        "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rc_ic_star_hover.png",
-        "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\drawable-xhdpi\\rc_ic_star_hover.png"
-    },
-    {
         "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\u1f606.png",
         "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\drawable-xhdpi\\u1f606.png"
+    },
+    {
+        "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rc_ic_star_hover.png",
+        "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\src\\main\\res\\drawable-xhdpi\\rc_ic_star_hover.png"
     },
     {
         "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\rc_bg_text_hover.9.png",

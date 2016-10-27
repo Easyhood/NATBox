@@ -2,7 +2,6 @@ package com.rgk.qiguan.natbox.ui.fragment;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +9,9 @@ import android.view.ViewGroup;
 import com.rgk.qiguan.natbox.R;
 
 /**
- * A simple {@link Fragment} subclass.
+ * 联系人fragment
  */
-public class ContactFragment extends Fragment {
+public class ContactFragment extends BaseFragment {
 
 
     public ContactFragment() {

@@ -2,7 +2,6 @@ package com.rgk.qiguan.natbox.ui.fragment;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,7 @@ import com.rgk.qiguan.natbox.R;
 /**
  * 会话的fragment
  */
-public class ChatFragment extends Fragment {
+public class ChatFragment extends BaseFragment {
 
 
     public ChatFragment() {

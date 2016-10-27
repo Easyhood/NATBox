@@ -4,32 +4,32 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/rc_ac_ram_icon"
-            android:title="Import"/>
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="新闻精选"/>
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/rc_ac_ram_icon"
-            android:title="Gallery"/>
+            android:icon="@drawable/ic_face_black_24dp"
+            android:title="每日一笑"/>
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/rc_ac_ram_icon"
-            android:title="Slideshow"/>
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="每日美图"/>
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/rc_ac_ram_icon"
-            android:title="Tools"/>
+            android:icon="@drawable/ic_menu_manage"
+            android:title="应用推荐"/>
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="其他">
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/rc_ac_ram_icon"
-                android:title="Share"/>
+                android:icon="@drawable/ic_menu_share"
+                android:title="软件分享"/>
             <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/rc_ac_ram_icon"
-                android:title="Send"/>
+                android:icon="@drawable/ic_menu_send"
+                android:title="软件关于"/>
         </menu>
     </item>
 

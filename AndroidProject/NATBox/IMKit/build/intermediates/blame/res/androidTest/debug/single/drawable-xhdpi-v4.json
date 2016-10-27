@@ -128,12 +128,12 @@
         "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\u1f339.png"
     },
     {
-        "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\rc_ic_camera_normal.png",
-        "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\rc_ic_camera_normal.png"
-    },
-    {
         "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\rc_cs_group_uncheck.png",
         "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\rc_cs_group_uncheck.png"
+    },
+    {
+        "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\rc_ic_camera_normal.png",
+        "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\rc_ic_camera_normal.png"
     },
     {
         "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\u1f64a.png",
@@ -1252,12 +1252,12 @@
         "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\rc_voip_phone.png"
     },
     {
-        "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\rc_voip_camera.png",
-        "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\rc_voip_camera.png"
-    },
-    {
         "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\u263a.png",
         "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\u263a.png"
+    },
+    {
+        "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\rc_voip_camera.png",
+        "source": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\rc_voip_camera.png"
     },
     {
         "merged": "F:\\Git\\NATBox\\AndroidProject\\NATBox\\IMKit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\u270f.png",
