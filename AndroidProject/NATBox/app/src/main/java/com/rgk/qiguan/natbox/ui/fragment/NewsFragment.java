@@ -1,7 +1,9 @@
 package com.rgk.qiguan.natbox.ui.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,11 +15,12 @@ import android.widget.Toast;
 import com.jude.easyrecyclerview.EasyRecyclerView;
 import com.jude.easyrecyclerview.adapter.RecyclerArrayAdapter;
 import com.jude.easyrecyclerview.decoration.SpaceDecoration;
-import com.rgk.qiguan.natbox.Easyrecycle.NewsAdapter;
+import com.rgk.qiguan.natbox.easyrecycle.NewsAdapter;
 import com.rgk.qiguan.natbox.R;
 import com.rgk.qiguan.natbox.domain.News;
 import com.rgk.qiguan.natbox.domain.NewsGson;
 import com.rgk.qiguan.natbox.service.ApiService;
+import com.rgk.qiguan.natbox.ui.activity.NewsDetailActivity;
 import com.rgk.qiguan.natbox.utils.PixUtils;
 
 import java.util.ArrayList;
@@ -76,7 +79,7 @@ public class NewsFragment extends BaseFragment {
         adapter.setMore(R.layout.view_more, new RecyclerArrayAdapter.OnMoreListener() {
             @Override
             public void onMoreShow() {
-                //TODO 2016年10月28日09:31:43
+                getData();
             }
 
             @Override
@@ -84,6 +87,39 @@ public class NewsFragment extends BaseFragment {
 
             }
         });
+
+        //刷新事件
+        recyclerView.setRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                recyclerView.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                       adapter.clear();
+                        page = 0;
+                        getData();
+                    }
+                },1000);
+            }
+        });
+
+        //点击事件
+        adapter.setOnItemClickListener(new RecyclerArrayAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                ArrayList<String> data = new ArrayList<>();
+                data.add(adapter.getAllData().get(position).getPicUrl());
+                data.add(adapter.getAllData().get(position).getUrl());
+                data.add(adapter.getAllData().get(position).getTitle());
+                Intent intent = new Intent(getActivity(), NewsDetailActivity.class);
+                //用Bundle携带数据
+                Bundle bundle = new Bundle();
+                bundle.putStringArrayList("data",data);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 

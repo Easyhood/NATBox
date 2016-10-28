@@ -1,4 +1,4 @@
-package com.rgk.qiguan.natbox.Easyrecycle;
+package com.rgk.qiguan.natbox.easyrecycle;
 
 import android.graphics.Bitmap;
 import android.util.DisplayMetrics;

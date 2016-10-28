@@ -1,4 +1,4 @@
-package com.rgk.qiguan.natbox.Easyrecycle;
+package com.rgk.qiguan.natbox.easyrecycle;
 
 import android.content.Context;
 import android.view.ViewGroup;
