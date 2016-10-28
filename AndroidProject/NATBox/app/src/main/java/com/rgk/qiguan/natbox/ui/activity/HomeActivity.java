@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.rgk.qiguan.natbox.R;
 import com.rgk.qiguan.natbox.ui.fragment.ChatFragment;
@@ -32,6 +33,8 @@ import io.rong.imlib.RongIMClient;
 public class HomeActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationBar bottomlayout;
+    private Toolbar toolbar;
+    private TextView textToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,11 +58,12 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         }
 
         //初始化标题栏
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
-        if (toolbar != null){
-            toolbar.setTitle("德玛西亚");
-        }
+         //标题用textview代替，可获得水平居中效果
+        textToolbar = (TextView) findViewById(R.id.text_toolbar);
+        textToolbar.setText("资讯");
 
 
         //初始化浮动选择键
@@ -123,18 +127,23 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
                     switch (position){
                         case 0:
                             fragment = NewsFragment.newInstance();
+                            textToolbar.setText("资讯");
                             break;
                         case 1:
                             fragment = ChatFragment.newInstance();
+                            textToolbar.setText("会话");
                             break;
                         case 2:
                             fragment = ContactFragment.newInstance();
+                            textToolbar.setText("通讯录");
                             break;
                         case 3:
                             fragment = MeFragment.newInstance();
+                            textToolbar.setText("我");
                             break;
                         default:
                             fragment = NewsFragment.newInstance();
+                            textToolbar.setText("资讯");
                             break;
                     }
                     getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commitAllowingStateLoss();

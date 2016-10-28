@@ -21,7 +21,18 @@
             android:layout_height="?attr/actionBarSize"
             android:background="#33000000"
             app:layout_scrollFlags="scroll"
-            android:popupTheme="@style/AppTheme.PopupOverlay"/>
+            android:popupTheme="@style/AppTheme.PopupOverlay">
+            <TextView
+                android:id="@+id/text_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="文字居中"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+        </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 

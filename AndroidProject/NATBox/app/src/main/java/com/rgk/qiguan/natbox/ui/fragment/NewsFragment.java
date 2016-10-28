@@ -68,6 +68,7 @@ public class NewsFragment extends BaseFragment {
         recyclerView.setAdapter(adapter = new NewsAdapter(getActivity()));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+
         //添加边框
         SpaceDecoration itemDecoration = new SpaceDecoration((int) PixUtils.convertDpToPixel(8, getContext()));
         itemDecoration.setPaddingEdgeSide(true);
