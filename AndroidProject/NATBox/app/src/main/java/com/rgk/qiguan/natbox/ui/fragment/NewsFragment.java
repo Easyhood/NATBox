@@ -34,9 +34,6 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
-import static android.os.Build.VERSION_CODES.N;
-import static com.rgk.qiguan.natbox.R.id.recyclerView;
-
 /**
  * 新闻资讯的Fragment
  */
@@ -46,7 +43,7 @@ public class NewsFragment extends BaseFragment {
 
     private int page = 0;
 
-    @BindView(recyclerView)
+    @BindView(R.id.recyclerView)
     EasyRecyclerView recyclerView;
     @BindView(R.id.container_news)
     LinearLayout containerNews;
@@ -105,11 +102,11 @@ public class NewsFragment extends BaseFragment {
         ApiService apiManager = retrofit.create(ApiService.class);//这里采用的是java的动态代理模式
         apiManager.getNewsData("4df7151666666314af76d8c3b4e40a77","10",page)
                 .subscribeOn(Schedulers.io())
-                .map(new Func1<NewsGson, List<News>>() {
+                .map(new Func1<NewsGson,List<News>>() {
                     @Override
                     public List<News> call(NewsGson newsGson) {
                         List<News> newsList = new ArrayList<News>();
-                        for (NewsGson.newslistBean listBean : newsGson.getNewslist()){
+                        for (NewsGson.newslistBean listBean : newsGson.getNewslist()) {
                             News new1 = new News();
                             new1.setTitle(listBean.getTitle());
                             new1.setCtime(listBean.getCtime());
@@ -130,7 +127,7 @@ public class NewsFragment extends BaseFragment {
 
                     @Override
                     public void onError(Throwable e) {
-                        Toast.makeText(getContext(),"网络连接失败"，Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext(),"网络连接失败",Toast.LENGTH_LONG).show();
                     }
 
                     @Override

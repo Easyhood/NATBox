@@ -2,6 +2,8 @@ package com.rgk.qiguan.natbox.service;
 
 
 
+import com.rgk.qiguan.natbox.domain.NewsGson;
+
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import rx.Observable;
@@ -19,7 +21,7 @@ public interface ApiService {
     Observable<String> getString(@Query("key")String key, @Query("num")String num, @Query("page")int page);
 
     @GET("social/")
-    Observable<String> getNewsData(@Query("key")String key,@Query("num")String num,@Query("page")int page);
+    Observable<NewsGson> getNewsData(@Query("key")String key, @Query("num")String num, @Query("page")int page);
 
     @GET("meinv/")
     Observable<String> getPictureData(@Query("key")String key,@Query("num")String num,@Query("page")int page);
