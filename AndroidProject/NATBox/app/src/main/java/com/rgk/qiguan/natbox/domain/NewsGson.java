@@ -1,5 +1,7 @@
 package com.rgk.qiguan.natbox.domain;
 
+import java.util.List;
+
 /**
  * Description:
  * Copyright  : Copyright (c) 2016
@@ -25,7 +27,11 @@ public class NewsGson {
      * url : http://news.163.com/16/1011/10/C33ET2G000014SEH.html#f=slist
      */
 
-    private java.util.List<newslistBean> newslist;
+    private List<newslistBean> newslist;
+
+    public  static  NewsGson objectFromData(String str){
+        return new com.google.gson.Gson().fromJson(str, NewsGson.class);
+    }
 
     public int getCode() {
         return code;
@@ -43,12 +49,24 @@ public class NewsGson {
         this.msg = msg;
     }
 
+    public List<newslistBean> getNewslist(){
+        return newslist;
+    }
+    public void setNewslist(List<newslistBean> newslist){
+        this.newslist = newslist;
+    }
+
     public static class newslistBean {
         private String ctime;
         private String title;
         private String description;
         private String picUrl;
         private String url;
+
+        public static newslistBean objectFromData(String str) {
+
+            return new com.google.gson.Gson().fromJson(str, newslistBean.class);
+        }
 
         public String getCtime() {
             return ctime;
@@ -69,6 +87,8 @@ public class NewsGson {
         public String getDescription() {
             return description;
         }
+
+
 
         public void setDescription(String description) {
             this.description = description;
