@@ -43,7 +43,7 @@ public class NewsDetailActivity extends BaseActivity {
         toolbar.setTitle(data.get(2));
         setSupportActionBar(toolbar);
         //设置返回箭头
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
